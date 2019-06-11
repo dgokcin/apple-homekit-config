@@ -115,3 +115,5 @@ These are instructions to create a series of buttons within the Apple Home app t
     Open your Home app and add a new device with the plus button on the top right of the app. Scan the QR code at the next screen.
 
     All of your buttons should automatically be added to your Home!
+
+Stolen from: https://gist.github.com/dgokcin/ded3f67daeadfd8ecfe6511ff00c7015
