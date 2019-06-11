@@ -1,0 +1,51 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "CC:22:3D:E3:CE:30",
+        "port": 51826,
+        "pin": "031-45-154"
+    },
+
+    "platforms": [{
+        "platform": "cmdSwitch2",
+        "name": "CMD Switch",
+        "switches": [
+            {
+                "name" : "PS4",
+                "on_cmd": "ps4-waker",
+                "off_cmd": "ps4-waker standby",
+                "state_cmd": "ps4-waker search | grep -i '200 Ok'",
+                "polling": true,
+                "interval": 5,
+                "timeout": 9000,
+                "manufacturer": "Sony Corporation",
+                "model": "PS4",
+                "serial": "PS4"
+            },
+            {
+                "name" : "Netflix",
+                "on_cmd": "ps4-waker start CUSA00127",
+                "off_cmd": "ps4-waker remote ps",
+                "state_cmd": "ps4-waker search | grep -i 'CUSA00127'",
+                "polling": true,
+                "interval": 5,
+                "timeout": 2000,
+                "manufacturer": "Sony Corporation",
+                "model": "PS4",
+                "serial": "PS4"
+            },
+            {
+                "name" : "Spotify",
+                "on_cmd": "ps4-waker start CUSA01780",
+                "off_cmd": "ps4-waker remote ps",
+                "state_cmd": "ps4-waker search | grep -i 'CUSA01780'",
+                "polling": true,
+                "interval": 5,
+                "timeout": 2000,
+                "manufacturer": "Sony Corporation",
+                "model": "PS4",
+                "serial": "PS4"
+            }
+        ]
+    }]
+}
